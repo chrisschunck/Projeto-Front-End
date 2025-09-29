@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="http://cdn.tailwindcss.com"></script>
+    <title>FE</title>
+</head>    
+<body class="font-inter bg-lightgray text-slate-800">
+    <header id="header" class="fixed w-full z-30 transition-colors">
+        <nav class="max-w-6x1 mx-auto px-6 py-4 flex items-center justify-between">
+         <a href="#" class="flex items-center gap-3">
+           <img src="Code-vera.png" alt="Logo" class="w-12 h-12 mr-2">
+           <div>
+              <h1 class="">Code-Vera</h1>
+              <p class="text.sm">Um Software Inteligente</p>
+            </div>
+         </a>
+         <div class="flex items-center gap-4">
+          <button id="themeToggle" class="px-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-100">🌙</button>
+          <ul class="hidden md:flex items-center gap-10 text-sm">
+            <li><a href="#produtos">Produtos</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+          </ul>
+         </div>
+        </nav>
+    </header>
+    <main class="pt-24">
+        <section class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8 items-center">
+      <div>
+        <h2 class="text-4xl md:text-5xl font-extrabold leading-tight mb-4">Code-Vera: Um Software Inteligente</h2>
+        <p class="text-lg text-slate-600 mb-6">Encontre Hardware com valores mais acessiveis do mercado, veja nossa equipe e conheça o sistema ideal para sua empresa.</p>
+        <div class="flex gap-4">
+          <a href="#equipe" id="heroBtn2" class=" bg-black inline-flex items-center gap-3 rounded-full px-5 py-3 border text-white">Equipe <i class="fa fa-play"></i></a>
+          <a href="#home" class="inline-flex items-center gap-2 rounded-full px-5 py-3 border border-slate-200">Home</a>
+        </div>
+      </div>
+    </section>
+  
+    <form id="form-filtro">
+      <select id="categoria">
+        <option value="">Categorias</option>
+        <option value="Software">Software</option>
+        <option value="Hardware">Hardware</option>
+      </select>
+      <label>
+        <input type="checkbox" id="disponiveis"> Somente disponíveis
+      </label>
+      <button type="submit">Filtrar</button>
+      <button type="button" onclick="listarProdutos(produtos)">Listar Todos</button>
+    </form>
+    <br>
+    <div class="mx-auto px-6 text-center">
+    <h1 class="text-2xl font-bold mb-6">Produtos</h1>
+    <section id="produto" class="bg-white text-center md:grid-cols-3 px-4">
+      <div id="produtos" class="flex mt-4 gap-6 text-center justify-center"></div>
+    </section>
+    </div>
+    <section id="depoimentos" class="bg-lightgray py-12">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-2xl font-bold mb-6">Depoimentos</h3>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <blockquote class="mt-4 text-sm">"O sistema mudou a forma como compreendo a TI - aplicação imprecavel!"</blockquote>
+            <p class="mt-3 font-semibold">Paulo(cliente), 23 anos</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+               <blockquote class="mt-4 text-sm">"Navego todo dia - interface simples."</blockquote>
+            <p class="mt-3 font-semibold">Lucas(cliente), 28 anos</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <blockquote class="mt-4 text-sm">"Perfeito para encontrar novidades e conhecer tecnologias novas."</blockquote>
+            <p class="mt-3 font-semibold">Patrick(cliente), 39 anos</p>
+          </div>
+        </div>
+      </div>
+    </section>
+      <div id="searchSection" class="hidden mt-6">
+        <div class="flex gap-2 justify-center">
+          <input type="text" id="searchInput" placeholder="Digite artista ou música..." class="px-4 py-2 border rounded-lg flex-1">
+          <button id="searchBtn" class="px-4 py-2 bg-indigo-600 text-white rounded-lg">Buscar</button>
+        </div>
+      </div>
+
+      <!-- Loading spinner -->
+      <div id="loading" class="hidden flex justify-center mt-8">
+        <div class="animate-spin rounded-full h-10 w-10 border-b-2 border-indigo-600"></div>
+      </div>
+
+      <div id="results" class="grid md:grid-cols-2 gap-6 mt-8"></div>
+    </main>
+
+  <footer class="bg-white border-t mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-8 text-center text-slate-500 text-sm">
+      © 2025 Code-Vera — Todos os direitos reservados.
+    </div>    
+  </footer>
+      </div>
+    </section>
+<script src="script.js"></script>    
+</body>
+</html>

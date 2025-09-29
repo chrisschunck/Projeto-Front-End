@@ -1,0 +1,136 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: lightgray;
+  color: #222;
+}
+
+header {
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 1px;
+  background-color: rgb(13, 9, 40);
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+form {
+  background-color: rgb(13, 9, 40);
+  color: white;
+  padding: 15px;
+  display: flex;  
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+select, input[type="checkbox"], button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+button {
+  background-color: rgb(59, 47, 138);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: gray;
+}
+
+#produtos {
+  padding: 20px;
+}
+
+.categoria-section {
+  margin-bottom: 30px;
+}
+
+.categoria-title {  
+  color: #2e2545;
+  border-bottom: 2px solid #5e3ea1;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.produtos-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.produto {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+}
+
+.produto img {
+  width: 50%;
+  align-items: center;
+}
+
+.produto h3 {
+  margin: 10px 0 5px;
+  font-size: 1.1rem;
+}
+.produto   {
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  padding: 10px;
+  width: 200px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease, border-color 1s ease, box-shadow 1s ease;
+  align-items: center;
+}
+
+.produto:hover {
+  border-color: #5e3ea1;
+  transform: scale(1.03);
+  box-shadow: 12px 12px 36px rgba(94, 62, 161, 0.3);
+}
+
+/* === DARK THEME ENHANCEMENTS (corrigido) === */
+.dark body {
+  background-color: white; /* fundo preto */
+  color: #000000; /* texto claro */
+}
+
+.dark header {
+  background-color: lightgray; /* cinza profundo */
+  color: #f8fafc; /* quase branco */
+}
+
+.dark form {
+  background-color: rgb(201, 197, 197);
+}
+
+.dark #results .card {
+  background-color: lightgray; /* cinza azulado */
+  color: #f8fafc; /* texto claro */
+}
+
+.dark button {
+  background-color: #777b82; /* cinza médio */
+  color: #f1f5f9; /* texto claro */
+  border: 1px solid #475569; /* borda sutil */
+}
+
+.dark input {
+  background-color: lightgray;
+  color: #f1f5f9;
+  border: 1px solid #475569;
+}
